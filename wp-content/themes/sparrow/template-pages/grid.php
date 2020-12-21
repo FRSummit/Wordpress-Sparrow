@@ -1,40 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?> class="no-js no-svg">
 
 <head>
-    <meta charset="utf-8">
-    <!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Favicons Icon -->
-    <link rel="icon" href="http://demo.magikthemes.com/skin/frontend/base/default/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="http://demo.thmthemes.com/skin/frontend/base/default/favicon.ico"
-        type="image/x-icon" />
-    <title>Superb premium HTML5 &amp; CSS3 template</title>
-
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <!-- Mobile Specific -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- CSS Style -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css" media="all">
+    <!-- Favicons Icon -->
+    <link rel="icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/FRS.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/FRS.png"
+        type="image/x-icon" />
 
-
-    <!-- CSS Style -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/revslider.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-menu.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
@@ -43,6 +19,7 @@
     <link
         href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,600italic,400italic,700,700italic,800,800italic'
         rel='stylesheet' type='text/css'>
+    <?php wp_head(); ?>
 </head>
 
 <body class="inner-page">
@@ -58,15 +35,15 @@
                             <div class="col-xs-7 col-sm-6">
                                 <div class="dropdown block-language-wrapper hidden-xs"> <a role="button"
                                         data-toggle="dropdown" data-target="#" class="block-language dropdown-toggle"
-                                        href="#"> <img src="images/english.png" alt="language"> English <span
+                                        href="#"> <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/english.png" alt="language"> English <span
                                             class="caret"></span> </a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img
-                                                    src="images/english.png" alt="language"> English </a></li>
+                                                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/english.png" alt="language"> English </a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img
-                                                    src="images/francais.png" alt="language"> French </a></li>
+                                                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/francais.png" alt="language"> French </a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img
-                                                    src="images/german.png" alt="language"> German </a></li>
+                                                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/german.png" alt="language"> German </a></li>
                                     </ul>
                                 </div>
                                 <!-- End Header Language -->
@@ -110,7 +87,7 @@
                                                                 title="timi &amp; leslie Sophia Diaper Bag, Lemon Yellow/Shadow White"
                                                                 href="#l"><img
                                                                     alt="timi &amp; leslie Sophia Diaper Bag, Lemon Yellow/Shadow White"
-                                                                    src="products-images/p4.jpg"></a>
+                                                                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/p4.jpg"></a>
                                                             <div class="product-details">
                                                                 <div class="access"><a class="btn-remove1"
                                                                         title="Remove This Item" href="#">Remove</a> <a
@@ -129,7 +106,7 @@
                                                                 title="JP Lizzy Satchel Designer Diaper Bag - Slate Citron"
                                                                 href="#"><img
                                                                     alt="JP Lizzy Satchel Designer Diaper Bag - Slate Citron"
-                                                                    src="products-images/p3.jpg"></a>
+                                                                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/p3.jpg"></a>
                                                             <div class="product-details">
                                                                 <div class="access"><a class="btn-remove1"
                                                                         title="Remove This Item" href="#">Remove</a> <a
@@ -167,7 +144,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button aria-label="Close" data-dismiss="modal" class="close"
-                                                            type="button"><img src="images/interstitial-close.png"
+                                                            type="button"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/interstitial-close.png"
                                                                 alt="close"> </button>
                                                     </div>
                                                     <div class="modal-body">
@@ -222,7 +199,7 @@
         <nav>
             <div class="container">
                 <!-- Header Logo -->
-                <div class="logo"><a title="Datson" href="index.html"><img alt="Datson" src="images/logo.png"></a></div>
+                <div class="logo"><a title="Datson" href="index.html"><img alt="Datson" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.png"></a></div>
                 <!-- End Header Logo -->
 
                 <div class="mm-toggle-wrap">
@@ -384,7 +361,7 @@
                                     </div>
                                     <!--nav-block nav-block-center-->
                                     <div class="col-2">
-                                        <div class="menu_image"><a href="#" title=""><img src="images/menu_image.png"
+                                        <div class="menu_image"><a href="#" title=""><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/menu_image.png"
                                                     alt="menu_image"></a></div>
                                     </div>
                                 </div>
@@ -649,7 +626,7 @@
                                     <div class="slider-items slider-width-col1 owl-carousel owl-theme">
 
                                         <!-- Item -->
-                                        <div class="item"> <a href="#"><img alt="" src="images/category-img1.jpg"></a>
+                                        <div class="item"> <a href="#"><img alt="" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/category-img1.jpg"></a>
                                             <div class="cat-img-title cat-bg cat-box">
                                                 <div class="small-tag"><span>Hot Sale</span> 49% OFF</div>
                                                 <h2 class="cat-heading">Women Collection</h2>
@@ -659,7 +636,7 @@
                                         <!-- End Item -->
 
                                         <!-- Item -->
-                                        <div class="item"> <a href="#"><img alt="" src="images/category-img2.jpg"></a>
+                                        <div class="item"> <a href="#"><img alt="" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/category-img2.jpg"></a>
 
                                             <!-- End Item -->
 
@@ -725,7 +702,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="new-label new-top-left">New</div>
                                                     <div class="actions">
@@ -778,7 +755,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -830,7 +807,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -882,7 +859,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -934,7 +911,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -986,7 +963,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -1038,7 +1015,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -1090,7 +1067,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -1142,60 +1119,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
-                                                            alt="Retis lapen casen"></a>
-                                                    <div class="new-label new-top-left">New</div>
-                                                    <div class="actions">
-                                                        <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
-                                                                data-placement="right" title=""
-                                                                data-original-title="Quick View"> <span>Quick
-                                                                    View</span></a></div>
-                                                        <div class="link-wishlist"><a href="#" data-toggle="tooltip"
-                                                                data-placement="right" title=""
-                                                                data-original-title="Wishlist"><span>Add to
-                                                                    Wishlist</span></a></div>
-                                                        <div class="link-compare"><a href="#" data-toggle="tooltip"
-                                                                data-placement="right" title=""
-                                                                data-original-title="Compare"><span>Add to
-                                                                    Compare</span></a></div>
-                                                        <div class="add_cart">
-                                                            <button class="button btn-cart" type="button"
-                                                                data-toggle="tooltip" data-placement="right" title=""
-                                                                data-original-title="Add to Cart"><span>Add to
-                                                                    Cart</span></button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="rating">
-                                                        <div class="ratings">
-                                                            <div class="rating-box">
-                                                                <div class="rating" style="width:80%"></div>
-                                                            </div>
-                                                            <p class="rating-links"><a href="#">1 Review(s)</a> <span
-                                                                    class="separator">|</span> <a href="#">Add
-                                                                    Review</a> </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item-info">
-                                                <div class="info-inner">
-                                                    <div class="item-title"><a href="#" title="Retis lapen casen">Retis
-                                                            lapen casen</a> </div>
-                                                    <div class="item-content">
-                                                        <div class="item-price">
-                                                            <div class="price-box"><span class="regular-price"><span
-                                                                        class="price">$125.00</span> </span> </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                                        <div class="item-inner">
-                                            <div class="item-img">
-                                                <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="new-label new-top-left">New</div>
                                                     <div class="actions">
@@ -1248,7 +1172,60 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
+                                                            alt="Retis lapen casen"></a>
+                                                    <div class="new-label new-top-left">New</div>
+                                                    <div class="actions">
+                                                        <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
+                                                                data-placement="right" title=""
+                                                                data-original-title="Quick View"> <span>Quick
+                                                                    View</span></a></div>
+                                                        <div class="link-wishlist"><a href="#" data-toggle="tooltip"
+                                                                data-placement="right" title=""
+                                                                data-original-title="Wishlist"><span>Add to
+                                                                    Wishlist</span></a></div>
+                                                        <div class="link-compare"><a href="#" data-toggle="tooltip"
+                                                                data-placement="right" title=""
+                                                                data-original-title="Compare"><span>Add to
+                                                                    Compare</span></a></div>
+                                                        <div class="add_cart">
+                                                            <button class="button btn-cart" type="button"
+                                                                data-toggle="tooltip" data-placement="right" title=""
+                                                                data-original-title="Add to Cart"><span>Add to
+                                                                    Cart</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <div class="ratings">
+                                                            <div class="rating-box">
+                                                                <div class="rating" style="width:80%"></div>
+                                                            </div>
+                                                            <p class="rating-links"><a href="#">1 Review(s)</a> <span
+                                                                    class="separator">|</span> <a href="#">Add
+                                                                    Review</a> </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title"><a href="#" title="Retis lapen casen">Retis
+                                                            lapen casen</a> </div>
+                                                    <div class="item-content">
+                                                        <div class="item-price">
+                                                            <div class="price-box"><span class="regular-price"><span
+                                                                        class="price">$125.00</span> </span> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
+                                        <div class="item-inner">
+                                            <div class="item-img">
+                                                <div class="item-img-info"><a href="#" title="Retis lapen casen"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -1300,7 +1277,7 @@
                                         <div class="item-inner">
                                             <div class="item-img">
                                                 <div class="item-img-info"><a href="#" title="Retis lapen casen"
-                                                        class="product-image"><img src="products-images/product.jpg"
+                                                        class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                             alt="Retis lapen casen"></a>
                                                     <div class="actions">
                                                         <div class="quick-view-btn"><a href="#" data-toggle="tooltip"
@@ -1639,7 +1616,7 @@
                                     <p class="block-subtitle">Recently added item(s) </p>
                                     <ul>
                                         <li class="item"> <a href="#" title="Retis lapen casen"
-                                                class="product-image"><img src="products-images/product.jpg"
+                                                class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                     alt="Fisher-Price Bubble Mower"></a>
                                             <div class="product-details">
                                                 <div class="access"> <a href="#" title="Remove This Item"
@@ -1651,7 +1628,7 @@
                                             </div>
                                         </li>
                                         <li class="item last"> <a href="#" title="Retis lapen casen"
-                                                class="product-image"><img src="products-images/product.jpg"
+                                                class="product-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/products-images/product.jpg"
                                                     alt="Prince Lionheart Jumbo Toy Hammock"></a>
                                             <div class="product-details">
                                                 <div class="access"> <a href="#" title="Remove This Item"
@@ -1791,35 +1768,35 @@
                         <div class="slider-items slider-width-col6">
 
                             <!-- Item -->
-                            <div class="item"><a href="#"><img src="images/b-logo3.png" alt="Image"></a> </div>
+                            <div class="item"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/b-logo3.png" alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                            <div class="item"><a href="#"><img src="images/b-logo2.png" alt="Image"></a> </div>
+                            <div class="item"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/b-logo2.png" alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                            <div class="item"><a href="#"><img src="images/b-logo1.png" alt="Image"></a> </div>
+                            <div class="item"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/b-logo1.png" alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                            <div class="item"><a href="#"><img src="images/b-logo4.png" alt="Image"></a> </div>
+                            <div class="item"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/b-logo4.png" alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                            <div class="item"><a href="#"><img src="images/b-logo5.png" alt="Image"></a> </div>
+                            <div class="item"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/b-logo5.png" alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                            <div class="item"><a href="#"><img src="images/b-logo6.png" alt="Image"></a> </div>
+                            <div class="item"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/b-logo6.png" alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                            <div class="item"><a href="#"><img src="images/b-logo1.png" alt="Image"></a> </div>
+                            <div class="item"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/b-logo1.png" alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                            <div class="item"><a href="#"><img src="images/b-logo4.png" alt="Image"></a> </div>
+                            <div class="item"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/b-logo4.png" alt="Image"></a> </div>
                             <!-- End Item -->
 
                         </div>
@@ -1902,7 +1879,7 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="col-sm-12 col-xs-12 footer-logo"><img alt="Datson" src="images/logo.png"></div>
+                    <div class="col-sm-12 col-xs-12 footer-logo"><img alt="Datson" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.png"></div>
                     <address>
                         <i class="fa fa-map-marker"></i>ThemesGround, 789 Main rd, Anytown, CA 12345 USA <i
                             class="fa fa-mobile"></i><span> +(888) 123-4567</span> <i class="fa fa-envelope"></i><span>
@@ -2126,11 +2103,11 @@
         </ul>
         <div class="dropdown block-language-wrapper">
             <ul>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="images/english.png"
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/english.png"
                             alt="language"> English </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="images/francais.png"
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/francais.png"
                             alt="language"> French </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="images/german.png"
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/german.png"
                             alt="language"> German </a></li>
             </ul>
         </div>
@@ -2145,14 +2122,7 @@
     <!-- End Footer -->
 
     <!-- JavaScript -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/parallax.js"></script>
-    <script type="text/javascript" src="js/revslider.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile-menu.min.js"></script>
+    <?php wp_footer(); ?>
     <script type='text/javascript'>
         jQuery(document).ready(function () {
             jQuery('#rev_slider_4').show().revolution({
