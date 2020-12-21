@@ -1,0 +1,48 @@
+DOWNLOAD & CONFIGURE Wordpress
+=================================
+1. Download Wordpress.
+2. Extract wordpress and move folder to xampp > htdocs and named it from wordpress to wordpress-sparrow-project.
+3. Open this to editor and run xampp server.
+4. Go to browser and browse http://localhost:8080/wordpress-sparrow-project.
+5. We can see the language configuration page. Select English (United State) as default language and click 'Continue'.
+6. Now we can see the welcome page which will show us the next procedure. Click 'Let's go' buttton.
+7. Here we can see the database configuration page. Before we complete this we have to create a database from phpmyadmin. So let's open http://localhost:8080/phpmyadmin in a new tab.
+8. Create a new db and named as 'wordpress_sparrow'.
+9. Go to phpmyadmin > wordpress_sparrow > Privileges and create a new user. Give below informations-
+        # User name: sparrow
+        # Host name: localhost
+        # password : sparrow
+        # Now check all global privileges and click 'Go' to save.
+
+10. Come back to our wordpress_sparrow_project browser and complete the database informations as below-
+        # Database Name: wordpress_sparrow
+        # Username     : sparrow
+        # Password     : sparrow
+        # Database Host: localhost
+        # Table Prefix : frs_
+11. Now click 'Submit' button. After this we can see the installation dialog. Now click 'Run the installation' button.
+12. Now we can see the wordpress website informations section. Fill these as below-
+        # Site Title   : Sparrow
+        # Username     : sparrow
+        # Password     : sparrow
+        # Your Email   : frsummit1@gmail.com
+13. After finish this click 'Install Wordpress' button. After sometime we can see the success message. Now click 'Login' button.
+14. Login the site using wordpress login information. After login we can see the wordpress admin pannel. Until this we have created and instal wordpress in our system.
+
+CUSTOM THEME DESIGN
+==============================
+1. Go to wp-content > theme and remove all of those default themes. Inside themes folder create a new folder and named as your theme name. Ex: 'sparrow'.
+2. Now create some default files (php, css) for our theme. Files given below-
+        # style.css     -> Our theme style which override all of other styles.
+        # index.php     -> Theme's index or home page. This page will call first.
+        # functions.php -> This file will contains all of our functions and methods.
+        # page.php      -> Common list page like blog list page or category page etc.
+        # single.php    -> This page will contains all of the single data of dynamic page.
+        # front-page.php-> This page like index page. We can keep it or remove it.
+        # header.php    -> This will contains the header part/section.
+        # footer.php    -> This will contains the footer part/section.
+        # archive.php   -> This are generated to organize a list of posts under a specific post type, category, or tag
+        # search.php    -> Search anything.
+        # 404.php       -> If any page is not present.
+3. Copy an image as theme image and paste it to theme > sparrow folder. Now name the image as 'screenshot'. Resize it 1200x900 px.
+4. 
