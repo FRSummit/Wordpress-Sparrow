@@ -125,3 +125,44 @@ CUSTOM THEME DESIGN
                 # Replace/Change rest of the js srcs.
                 # Reload site page. The js is now dynamically called by function.
                 # To add our theme default jquery, just add wp_enqueue_script('jquery'); at the top of the script function. No need if we add template's js srcs.
+9. Home Page Setup from admin pannel:
+        # Go to wp_admin > Pages > Add New. Create a new page and named it Home. Save and Publish it.
+        # Go to wp_admin > Settings > Reading. Set 'Your homepage displays' => A static page and select Home and Save it.
+        # Go to wp_admin > Settings > Permalinks. Select 'Post name' from 'Common Settings' and save it.
+        # Now reload index (Home) page. There is no change but our home page is configured.
+10. Add 'Menus' in Appearance:
+        # By default wp_admin > Appearance has no 'Menus' in its list. It has only 3 items. They are Themes, Customize, Theme Editor.
+        # Go to functions.php and add below code:
+                add_theme_support('menus');
+                add_theme_support('post-thumbnails');
+        # First one will add the 'Menus' in wp_admin > Appearance list. Now it has 4 items.
+        # Second one is for Post Thumbnails. We will know it later.
+11. Create custom Menus by navigation menus (Home, About, Contact etc):
+        # Go to functions.php and add following code:
+                register_nav_menus(
+                    array(
+                        'top-menu' => __('Top Menu', 'theme'),
+                    )
+                );
+        # This is for dynamic menus. We create page from wp_admin > All Pages > Add New and then we add this page as menu item from wp_admin > Appearance > Menus.
+        # But before this we have to declear to add these menus dynamically. This is why we added that code in functions.php.
+        # Now go to wp_admin > Appearance > Menus and see the 'Menu Settings'. There should be an item which name is 'Top Menu'. It is a checkbox.
+        # Before we select this we need to create a Menu name. Gice a menu name (ex: Sparrow Menu or Menu 1 etc) and save it.
+        # Now select 'Top Menu' from 'Menu Settings' and save it.
+        # See the left sidebar named 'Add menu items'. Open 'Pages' and select page name (ex: Home, About etc) and click 'Add to Menu' to add.
+        # Create one more page (ex: About) and add it to our menus list (Top Menu).
+        # We just complete the part of adding our menus. Now we need to show the menu at the top of the page.
+12. Show Dynamic Menus at the Header:
+        # Go to themes > sparrow > header.php and comment the full markup code which is for navbar menus or header menus.
+        # Add following code instead navbar menus:
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'top-menu',
+                        'menu_id' => 'main-menu',
+                        'container' => 'ul',
+                        'menu_class' => 'main-menu font-mountainsre',
+                    )
+                );?>
+        # This code will show our dynamic menus at the top of the page (header/navbar).
+        # It is broken but still better than static menus.
