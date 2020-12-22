@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
+<html <?php language_attributes();?> class="no-js no-svg">
 <!-- Basic -->
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
+    <title><?php bloginfo('name');?> | <?php bloginfo('description');?></title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">

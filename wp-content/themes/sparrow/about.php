@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes();?> class="no-js no-svg">
 <!-- Basic -->
 
 <head>
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
+    <title><?php bloginfo('name');?> | <?php bloginfo('description');?></title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
