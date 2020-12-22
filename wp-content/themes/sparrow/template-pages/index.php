@@ -15,8 +15,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/css/bootstrap.min.css">
