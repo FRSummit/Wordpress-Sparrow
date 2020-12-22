@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?> class="no-js no-svg">
 <!-- Basic -->
 <head>
     <meta charset="utf-8">
