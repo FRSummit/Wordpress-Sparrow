@@ -44,5 +44,84 @@ CUSTOM THEME DESIGN
         # archive.php   -> This are generated to organize a list of posts under a specific post type, category, or tag
         # search.php    -> Search anything.
         # 404.php       -> If any page is not present.
-3. Copy an image as theme image and paste it to theme > sparrow folder. Now name the image as 'screenshot'. Resize it 1200x900 px.
-4. 
+3. Copy an image as theme image and paste it to theme > sparrow folder. Now name the image as 'screenshot'. Resize it 1200x900 px. This is out theme picture. Go to Appearance > Themes, you cacn see the image.
+4. Create a folder inside themes > sparrow and named it assets.
+5. Copy all of asset folders (css, js, images, fonts, webfonts, php etc) and paste those inside theme > sparrow > assets folder.
+6. Index Page Create:
+        # Copy index.html and paste everything to themes > sparrow > index.php
+        # Replace <html> tag by <html <?php language_attributes();?> class="no-js no-svg">
+                before: <html>
+                after : <html <?php language_attributes();?> class="no-js no-svg">
+        # Edit title tag as below:
+                before: <title>Sparrow</title>
+                after : <title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
+        # We can change the site title name and description from wp_admin > Settings > General where site title is the name of the site and tagline is the description.
+        # Replace all of image assets href (href="images/favicon.ico") by href (href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/favicon.ico")
+                before: href="images/favicon.ico"
+                after : href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/favicon.ico"
+        # Replace all of css assets link (href="css/bootstrap.min.css") by href (href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/css/bootstrap.min.css")
+                before: <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+                after : 
+                        not safe: <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/bootstrap.min.css">
+                        secure  : <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/css/bootstrap.min.css">
+        # Replace all of js assets src (src="js/jquery-3.2.1.min.js") by src (src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/jquery-3.2.1.min.js")
+                before: <script src="js/jquery-3.2.1.min.js"></script>
+                after : 
+                        not safe: <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.2.1.min.js"></script>
+                        secure  : <script src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/jquery-3.2.1.min.js"></script>
+        # Now load the index (Home) page from wp_admin or reload index (Home) page of it is already loaded. We can see our index (Home) page looks like template's index (Home) page.
+7. Separate header &  footer:
+        # Create 2 php files header.php and footer.php inside themes > sparrow.
+        # Move from <!DOCTYPE html> to header end tag </header> markup codes from index.php to header.php
+        # Now move from <footer> to html end tag </html> markup codes from index.php to footer.php
+        # Add <?php get_header(); ?> at the top of the index.php and add <?php get_footer(); ?> at the bottom of the index.php.
+        # Reload index (Home) page and see there is no changes. But this time our header and footer comes from separate php files. This is how we can reuse header and footer by calling <?php get_header(); ?> & <?php get_footer(); ?> for other pages (About, Contact, Shop etc).
+8. Dynamic title, css, js load using function.php:
+        # Create a new file functions.php and add <?php at the top. I mean start by <?php tag.
+        # Remove css from header.php and js from footer.php
+        # Add <?php wp_head(); ?> before head tag ends </head> and <?php wp_footer(); ?> before body tag ends </body>.
+        # Add add_theme_support('title-tag'); at the second line of functions.php and remove title tag from header.php. This is our dynamic title tag which load site title and description dynamically.
+        # Now add following code for dynamic style/css:
+                # Create a function like function sparrow_enqueue_style() {}
+                # Use code reference perameter for style - 
+                        wp_enqueue_style ($handle, $src, $deps, $version, $media);
+                                $handle : css/js file id
+                                $src    : source location
+                                $deps   : dependencies, type of array()
+                                $version: version of code
+                                $media  : (optional)
+                # Remove style link from header.php if still present.
+                # Add style link into functions.php
+                        index.php :
+                                <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/css/main.css">
+                        functions.php :
+                                function sparrow_enqueue_style() {
+                                        wp_enqueue_style ('main',get_template_directory_uri() . '/assets/css/main.css', array(), '1.0');
+                                }
+                                add_action('wp_enqueue_scripts', 'sparrow_enqueue_style');
+                # Replace/Change rest of the styles link.
+                # Reload site page. The style is now dynamically called by function.
+                # To add our theme style.css just add wp_enqueue_style('style', get_stylesheet_uri()); this inside style function
+        # Now add following code for dynamic js:
+                # Create a function like function sparrow_enqueue_script() {}
+                # Use code reference perameter for script - 
+                        wp_enqueue_style ($script-name, $src, $deps, $version, boolean);
+                                $script-name : js file id
+                                $src    : source location (get_template_directory_uri() . '/assets/js/bootstrap-select.min.js')
+                                $deps   : dependencies, type of array()
+                                $version: version of code
+                                boolean  : true/false
+                                                if true, this script will add before the body tag ends
+                                                if false, this script will add before the head tag ends
+                # Remove js src from footer.php if still present.
+                # Add js src into functions.php
+                        index.php :
+                                <script src="assets/js/jquery-1.11.1.min.js"></script>
+                        functions.php :
+                                function sparrow_enqueue_script() {
+                                        wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-1.11.1.min.js', array(), 1, true);
+                                }
+                                add_action('wp_enqueue_scripts', 'sparrow_enqueue_script');
+                # Replace/Change rest of the js srcs.
+                # Reload site page. The js is now dynamically called by function.
+                # To add our theme default jquery, just add wp_enqueue_script('jquery'); at the top of the script function. No need if we add template's js srcs.
