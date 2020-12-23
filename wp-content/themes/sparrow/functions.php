@@ -31,6 +31,7 @@ function sparrow_enqueue_script() {
     wp_enqueue_script('form_validator', get_template_directory_uri() . '/assets/js/form-validator.min.js', array(), 1, true);
     wp_enqueue_script('contact_form_script', get_template_directory_uri() . '/assets/js/contact-form-script.js', array(), 1, true);
     wp_enqueue_script('custom', get_template_directory_uri() . '/assets/js/custom.js', array(), 1, true);
+    wp_enqueue_script('my_custom_js', get_template_directory_uri() . '/custom.js', array(), 1, true);
 }
 add_action('wp_enqueue_scripts', 'sparrow_enqueue_script');
 

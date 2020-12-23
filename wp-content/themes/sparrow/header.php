@@ -98,15 +98,19 @@
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
                 <?php
                 wp_nav_menu(
                         array(
                             'theme_location' => 'top-menu',
-                            'menu_id' => 'main-menu',
-                            'container' => 'ul',
-                            'menu_class' => 'main-menu font-mountainsre',
+                            'menu_id'        => 'main-menu',
+                            'items_wrap'     => '<ul class="nav navbar-nav ml-auto" id="%1$s" data-in="fadeInDown" data-out="fadeOutUp">%3$s</ul>',
+                            'container'      => '',
+                            'menu_class'     => 'nav navbar-nav ml-auto',
+                            'add_li_class'   => 'nav-item',
                         )
                 );?>
+                </div>
                 <!-- <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
