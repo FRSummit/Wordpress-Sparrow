@@ -15,7 +15,7 @@ add_action('wp_enqueue_scripts', 'sparrow_enqueue_style');
 
 function sparrow_enqueue_script() {
     // ALL JS FILES
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.2.1.min.js', array(), 1, true);
+    wp_enqueue_script('jquery_min', get_template_directory_uri() . '/assets/js/jquery-3.2.1.min.js', array(), 1, true);
     wp_enqueue_script('popper', get_template_directory_uri() . '/assets/js/popper.min.js', array(), 1, true);
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), 1, true);
 
