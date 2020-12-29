@@ -37,11 +37,25 @@ add_action('wp_enqueue_scripts', 'sparrow_enqueue_script');
 
 // Theme Support
 add_theme_support('menus');
-add_theme_support('post-thumbnails');
+add_theme_support('post-thumbnails'); // For Featured image section wp_admin > All Pages > About (Any page) > right bottom list section
 
-// Register Menus
+// Register Main Menus
 register_nav_menus(
     array(
         'top-menu' => __('Top Menu', 'theme'),
+    )
+);
+
+// Register Top Banner Menus
+register_nav_menus(
+    array(
+        'top-banner-menu' => __('Top Banner Menu', 'theme'),
+    )
+);
+
+// Register Footer Menus (Information)
+register_nav_menus(
+    array(
+        'footer-information' => __('Footer Information', 'theme'),
     )
 );

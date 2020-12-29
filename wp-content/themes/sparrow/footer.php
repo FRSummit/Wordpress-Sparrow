@@ -111,14 +111,25 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
                             <h4>Information</h4>
-                            <ul>
+                            <!-- <ul>
                                 <li><a href="#">About Us</a></li>
                                 <li><a href="#">Customer Service</a></li>
                                 <li><a href="#">Our Sitemap</a></li>
                                 <li><a href="#">Terms &amp; Conditions</a></li>
                                 <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Delivery Information</a></li>
-                            </ul>
+                            </ul> -->
+                        <?php
+                        wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-information',
+                                    'menu_id'        => 'top-banner-menu',
+                                    'items_wrap'     => '<ul class="" id="%1$s">%3$s</ul>',
+                                    'container'      => '',
+                                    'menu_class'     => 'nav navbar-nav ml-auto',
+                                    'add_li_class'   => 'nav-item',
+                                )
+                        );?>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">

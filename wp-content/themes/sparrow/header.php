@@ -70,11 +70,22 @@
                         <p>Call US :- <a href="#"> +11 900 800 100</a></p>
                     </div>
                     <div class="our-link">
-                        <ul>
+                        <!-- <ul>
                             <li><a href="#">My Account</a></li>
                             <li><a href="#">Our location</a></li>
                             <li><a href="#">Contact Us</a></li>
-                        </ul>
+                        </ul> -->
+                        <?php
+                        wp_nav_menu(
+                                array(
+                                    'theme_location' => 'top-banner-menu',
+                                    'menu_id'        => 'top-banner-menu',
+                                    'items_wrap'     => '<ul class="" id="%1$s">%3$s</ul>',
+                                    'container'      => '',
+                                    'menu_class'     => 'nav navbar-nav ml-auto',
+                                    'add_li_class'   => 'nav-item',
+                                )
+                        );?>
                     </div>
                 </div>
             </div>
